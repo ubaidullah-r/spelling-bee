@@ -10,7 +10,7 @@ RUN npm run build
 FROM httpd:alpine3.16 AS prod
 
 WORKDIR /usr/local/apache2/htdocs/
-COPY --from=build /home/ubaid/app/dist .
+COPY --from=build /home/node/app/dist .
 
 RUN adduser node2
 
