@@ -11,7 +11,3 @@ FROM httpd:alpine3.16 AS prod
 
 WORKDIR /usr/local/apache2/htdocs/
 COPY --from=build /home/node/app/dist .
-
-RUN adduser node2
-
-RUN su - node2
